@@ -31,13 +31,14 @@ densityplot(means$means,xlab="mean age across samples")
 
 ggplot(means) + geom_density(aes(x=means),size=1) + geom_rug(aes(x=means)) + 
   geom_vline(aes(xintercept=32.8,color="red"),size=2)+
-  annotate(geom="text",x=33,y=1,label="Mean age of women (in red)")+
-  annotate(geom="text",x=31.8,y=1,label="Sampling distribution for (male) age (black)")
+  annotate(geom="text",x=32.5,y=1.25,label="Mean age of women (in red)")+
+  annotate(geom="text",x=31.5,y=1.25,label="Sampling distribution for (male) age (black)")
 
 ok %>%
   group_by(sex) %>%
   summarize(mean_age=mean(age),sd_age=sd(age),n=n())
 
+# calculating t
 (32.8-32)/sqrt((9.03^2)/24117 + (10^2)/35829)
 
 ####################################
