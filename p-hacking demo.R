@@ -22,7 +22,7 @@ ok<-read.csv("~/okcupid_profiles.csv")
 ok_men <- ok %>%
   filter(sex=="m")
 
-means <- replicate(n=1000,mean(slice_sample(ok,n=1000)$age))
+means <- replicate(n=1000,mean(slice_sample(ok_men,n=1000)$age))
 
 means <- tibble(means)
 
