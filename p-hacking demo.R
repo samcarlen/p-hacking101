@@ -16,7 +16,7 @@ set.seed(4)
 
 # Original sample
 # Data avaiable at: https://www.kaggle.com/andrewmvd/okcupid-profiles
-ok<-read.csv("C:/Users/scarlen/Downloads/okcupid_profiles.csv")
+ok<-read.csv("~/okcupid_profiles.csv")
 
 # distribution of sample means for 1,000 subsamples of male OkCupid users
 ok_men <- ok %>%
